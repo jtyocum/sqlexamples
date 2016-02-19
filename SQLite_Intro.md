@@ -1,5 +1,13 @@
 # SQLite Examples
 
+# Learning Objectives
+This exercise will aid you in learning and understanding:
+
+- How to perform a basic SQL SELECT query
+- Provide a brief introduction to SQL functions, like COUNT
+- How to sort and filter records using SQL
+- Querying across multiple tables with JOIN
+
 # Getting Started
 
 1. Install the Firefox plugin, [SQLite Manager](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/), if you haven't already
