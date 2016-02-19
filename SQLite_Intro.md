@@ -5,7 +5,7 @@ This exercise will aid you in learning and understanding:
 
 - How to perform a basic SQL SELECT query
 - Provide a brief introduction to SQL functions, like COUNT
-- How to sort and filter records using ORDER and GROUP BY
+- How to sort and filter records using WHERE, ORDER and GROUP BY
 - Querying across multiple tables with JOIN
 
 # Getting Started
