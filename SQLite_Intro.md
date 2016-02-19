@@ -29,7 +29,7 @@ SELECT * FROM survey;
 
 A basic SELECT statement simply grabs some columns and returns their values. The WHERE clause enables you to filter the data being returned.
 
-Like our last example, we'll __SELECT__ all the columns __FROM__ the survey table. However, we only want records WHERE the age is greater than 55.
+Like our last example, we'll __SELECT__ all the columns __FROM__ the survey table. However, we only want records __WHERE__ the age is greater than 55.
 
 ```
 SELECT * FROM survey WHERE age > 55;
