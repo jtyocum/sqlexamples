@@ -39,7 +39,7 @@ SELECT * FROM survey WHERE age > 55;
 
 The ORDER BY clause sorts the records using by putting the values within a column in ASCending or DESCending order.
 
-Just like previously, we'll __SELECT__ all the columns __FROM__ the survey table. And, we only want records __WHERE__ age is greater than 55. Now, we want them __ORDER__ed __BY__ their moincome (monthly income) in __DESC__ending order.
+Just like previously, we'll __SELECT__ all the columns __FROM__ the survey table. And, we only want records __WHERE__ age is greater than 55. Now, we want them <b>ORDER</b>ed __BY__ their moincome (monthly income) in <b>DESC</b>ending order.
 
 ```
 SELECT * FROM survey WHERE age > 55 ORDER BY moincome DESC;
@@ -59,7 +59,7 @@ SELECT COUNT(*) FROM survey WHERE age > 55;
 
 The GROUP BY clause groups records together based on a common value. For example, you could GROUP BY age.
 
-In this example, we'll __SELECT__ the age column, and __COUNT__ the records' age column __FROM__ the survey table. The records are __GROUP__ed __BY__ age, and __ORDER__ed __BY__ age;
+In this example, we'll __SELECT__ the age column, and __COUNT__ the records' age column __FROM__ the survey table. The records are <b>GROUP</b>ed __BY__ age, and <b>ORDER</b>ed __BY__ age;
 
 The result of this query? A list of each age, and a COUNT of how many survey respondents have that age.
 
