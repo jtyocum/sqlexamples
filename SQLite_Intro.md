@@ -5,7 +5,9 @@
 1. Install the Firefox plugin, [SQLite Manager](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/), if you haven't already
 2. Download the [Income Survey](https://github.com/jtyocum/sqlexamples/blob/master/income_survey.sqlite) database
 
-# The Basic SELECT Statement
+# Overview of SQL's SELECT statement
+
+## The Basic SELECT Statement
 
 With a SELECT statement, you tell the database what you want, and where you want to get it from.
 
@@ -15,7 +17,7 @@ The following example, tells the database we want to __SELECT__ all the columns 
 SELECT * FROM survey;
 ```
 
-# The WHERE Clause
+## The WHERE Clause
 
 A basic SELECT statement simply grabs some columns and returns their values. The WHERE clause enables you to filter the data being returned.
 
@@ -25,7 +27,7 @@ Like our last example, we'll __SELECT__ all the columns __FROM__ the survey tabl
 SELECT * FROM survey WHERE age > 55;
 ```
 
-# The ORDER BY Clause
+## The ORDER BY Clause
 
 The ORDER BY clause sorts the records using by putting the values within a column in ASCending or DESCending order.
 
@@ -35,7 +37,7 @@ Just like previously, we'll __SELECT__ all the columns __FROM__ the survey table
 SELECT * FROM survey WHERE age > 55 ORDER BY moincome DESC;
 ```
 
-# COUNTing Function
+## COUNTing Function
 
 The COUNT function enables you to COUNT the number of records that match some condition.
 
@@ -45,7 +47,7 @@ Unlike previous examples, we aren't SELECTing a column. In this case, we'll __SE
 SELECT COUNT(*) FROM survey WHERE age > 55;
 ```
 
-# The GROUP BY Clause
+## The GROUP BY Clause
 
 The GROUP BY clause groups records together based on a common value. For example, you could GROUP BY age.
 
@@ -57,7 +59,7 @@ The result of this query? A list of each age, and a COUNT of how many survey res
 SELECT age,COUNT(age) FROM survey GROUP BY age ORDER BY age;
 ```
 
-# JOINing Other Tables
+## JOINing Other Tables
 
 Up till this point, all of the examples utilized one database table. With JOIN, you can query across multiple tables, and produce a single output. In order for JOIN to work, each table needs a shared identifier.
 
@@ -68,3 +70,27 @@ To start, we'll __SELECT__ all the columns __FROM__ the survey table. Then __JOI
 ```
 SELECT * FROM survey JOIN respondents ON rid = id;
 ```
+
+Sometimes SELECTing all the columns will result in an output which isn't easy to read. And, when you JOIN other tables, the order of the columns may not make sense.
+
+So let's __SELECT__ the fname, lname, gender, age, and moincome columns __FROM__ the survey table. And, __JOIN__ the respondents table __ON__ the rid and id columns.
+
+```
+SELECT fname,lname,gender,age,moincome FROM survey JOIN respondents ON rid = id;
+```
+
+# Test Your Knowledge
+
+As you've seen in the examples, you can combine various SQL functions, clauses, and keywords to produce desired results.
+
+## SELECting Columns
+
+From the respondents table, select only the fname, and lname columns.
+
+## ORDERing BY Monthly Income
+
+From the survey table, select the age, gender, and moincome columns. Order the records (rows) by the Monthly Income (moincome) column in ascending order.
+
+## JOIN Both Tables
+
+Select the fname, lname, age, and moincome columns from both tables. Order the records by the lname column in descending order.
